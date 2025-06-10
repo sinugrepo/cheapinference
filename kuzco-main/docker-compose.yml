@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  kuzco-main:
+    container_name: kuzco-main
+    build: .
+    networks:
+      - kuzco-network
+    restart: always
+    environment:
+      NODE_ENV: "production"
+      INFERENCE_CODE: "CODE"
+
+networks:
+  kuzco-network:
+    driver: bridge
