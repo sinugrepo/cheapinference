@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME_PREFIX="kuzco-worker-"
-TIMEOUT=30
+TIMEOUT=5
 LOG_PATTERN="Initialized instance with ID"
 RESTART_IF_FAIL=true 
 
