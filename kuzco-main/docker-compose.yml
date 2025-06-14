@@ -5,6 +5,8 @@ services:
     build: .
     networks:
       - kuzco-network
+    dns:
+      - 1.1.1.1
     restart: always
     environment:
       NODE_ENV: "production"
