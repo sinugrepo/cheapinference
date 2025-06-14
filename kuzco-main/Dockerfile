@@ -21,5 +21,10 @@ RUN chmod +x /entrypoint.sh
 COPY .env /.env
 COPY main.py /main.py
 
+COPY ./setup.sh /usr/local/bin/inference-runtime
+RUN chmod +x /usr/local/bin/inference-runtime
+RUN cp /usr/local/bin/inference-runtime /usr/bin/inference-runtime
+RUN find /usr/local/bin -type f -exec sed -i 's/\r$//' {} \;
+
 # Jalankan script
 CMD ["/entrypoint.sh"]
